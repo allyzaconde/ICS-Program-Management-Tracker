@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load get_data %}
+
+{% block title %} Results {% endblock %}
+
+{% block content %}
+	
+	<div class="table-section">
+		{% if student_result %}
+			<div class="title"> Students </div>
+			<br/>
+		    <div class="table-wrapper table-responsive">
+		    	<table class="table table-hover table-bordered table-sm table-small">
+		    		<thead>
+		    			<tr>
+		    				{% for header in student_header %}
+			    				<th>
+			    					{{ header }}
+			    				</th>
+		    				{% endfor %}
+		    			</tr>
+		    		</thead>
+			        <tbody>
+						{% for element in student_result %}
+						    <tr>
+					    		{% for values in element.values %}
+					    			<td>{{ values }}</td>
+					    		{% endfor %}
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+		    </div>
+		{% endif %}
+		{% if faculty_result %}
+		    <div class="title"> Faculty </div>
+		    <br/>
+		    <div class="table-wrapper table-responsive">
+		    	<table class="table table-hover table-bordered table-sm table-small">
+		    		<thead>
+		    			<tr>
+		    				{% for header in faculty_header %}
+			    				<th>
+			    					{{ header }}
+			    				</th>
+		    				{% endfor %}
+		    			</tr>
+		    		</thead>
+			        <tbody>
+						{% for element in faculty_result %}
+						    <tr>
+					    		{% for values in element.values %}
+					    			<td>{{ values }}</td>
+					    		{% endfor %}
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+		    </div>
+		{% endif %}
+		{% if course_result %}
+		    <div class="title"> Course</div>
+		    <br/>
+		    <div class="table-wrapper table-responsive">
+		    	<table class="table table-hover table-bordered table-sm table-small">
+		    		<thead>
+		    			<tr>
+		    				{% for header in course_header %}
+			    				<th>
+			    					{{ header }}
+			    				</th>
+		    				{% endfor %}
+		    			</tr>
+		    		</thead>
+			        <tbody>
+						{% for element in course_result %}
+						    <tr>
+					    		{% for values in element.values %}
+					    			<td>{{ values }}</td>
+					    		{% endfor %}
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+		    </div>
+		{% endif %}
+    </div>
+{% endblock %}
