@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} About {% endblock %}
+
+{% block content %}
+
+    <div class="about">
+        <h3>Study Framework of Webpage</h3>
+        <div class="about-item">
+            <img src="{% static 'Images/framework.png' %}" alt="up" draggable="false">
+            Figure 1. Study Framework
+        </div>
+        <div class="about-item">
+            <img src="{% static 'Images/retrievedata.png' %}" alt="up" draggable="false">
+            Figure 2. Process of Retrieving Data
+        </div>
+        <div class="about-item">
+            <img src="{% static 'Images/perf.png' %}" alt="up" draggable="false">
+            Figure 3. Plot of Table for each Algorithm
+        </div> 
+    </div> 
+       
+{% endblock %}
