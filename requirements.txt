@@ -1,7 +1,7 @@
-django
+django==4.1.1
 django-crispy-forms
 crispy-bootstrap5
-mathfilters
+django-mathfilters
 gspread
 google-api-python-client
 oauth2client

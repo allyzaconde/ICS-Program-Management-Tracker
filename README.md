@@ -11,11 +11,11 @@
 1. Install `Python 3.10.5` and `Django 4.1.1`
 2. Run the following command to install other packages:
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 3. Run the following command to use the program:
 ```
-python manage.py runserver
+python3 manage.py runserver
 ```
 4. Open the website on the browser with the address `127.0.0.1:8000/`
 5. Log in credentials for normal user is:
